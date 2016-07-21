@@ -30,6 +30,7 @@ abstract class Table
         foreach ($arr as $val) {
             $sql .= ",'".$val."'";
         }
+        $this->dbo->executeSQL($sql);
         return $this->dbo->lastInsertId();
     }
 
